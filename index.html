@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trevor’s 5‑Month Micro‑Learning</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">🤖</div>
+      <div>
+        <h1>Trevor’s 5‑Month Micro‑Learning</h1>
+        <p class="sub">150 sessions • 10–15 minutes each • Math • Python • Science • Physics • Singapore travel • AI/Agentic AI</p>
+      </div>
+    </div>
+    <div class="actions">
+      <button id="exportBtn" class="ghost">Export progress</button>
+      <button id="resetBtn" class="ghost danger">Reset</button>
+      <label class="toggle"><input id="parentMode" type="checkbox"/> Parent mode (show answers)</label>
+    </div>
+  </header>
+
+  <main>
+    <aside id="sidebar">
+      <div class="progress">
+        <div class="progress-bar"><div id="progressFill"></div></div>
+        <div id="progressText" class="progress-text"></div>
+      </div>
+
+      <div class="filters">
+        <input id="search" placeholder="Search (e.g., Python, MRT, hawker, probability)…" />
+        <select id="subjectFilter">
+          <option value="">All subjects</option>
+          <option value="MATH">Math</option>
+          <option value="PY">Python</option>
+          <option value="SCI">Science</option>
+          <option value="PHY">Physics</option>
+          <option value="SG">Singapore travel</option>
+          <option value="AI">AI/Agentic AI</option>
+          <option value="TECH">Tech history</option>
+        </select>
+      </div>
+
+      <div id="sessionList" class="session-list"></div>
+    </aside>
+
+    <section id="content">
+      <div id="sessionView" class="card"><h2>Loading…</h2></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Progress is saved in your browser (localStorage). If you change device/browser, progress won’t follow unless you export/import.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
